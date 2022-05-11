@@ -1,4 +1,4 @@
-package pack_and_go;
+package pack_and_go.gui;
 
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.*;
