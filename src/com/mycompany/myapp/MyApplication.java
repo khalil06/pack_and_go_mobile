@@ -95,7 +95,8 @@ public class MyApplication {/*
         //houni awl interface yet7al
        // new MapForm(); //n7oto signup bch yjibha awl form
        // new SignInForm(theme).show();
-              new HomeForm().show();
+            //   new HomeForm().show();
+              new MenuComponent().getMenu().show();
 
     }
 
