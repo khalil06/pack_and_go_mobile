@@ -53,3 +53,6 @@
 [0509/203017.864:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
 [0511/191235.003:INFO:CONSOLE(66)] "You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started", source: https://maps.googleapis.com/maps/api/js?key=AIzaSyCy-fMWerzvXcPCV0FDI07hW2DAzs_mnpY&callback=initMap (66)
 [0511/191243.012:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)
+[0511/194022.798:INFO:CONSOLE(66)] "You must enable Billing on the Google Cloud Project at https://console.cloud.google.com/project/_/billing/enable Learn more at https://developers.google.com/maps/gmp-get-started", source: https://maps.googleapis.com/maps/api/js?key=AIzaSyCy-fMWerzvXcPCV0FDI07hW2DAzs_mnpY&callback=initMap (66)
+[0511/194023.463:WARNING:spdy_session.cc(3365)] Received HEADERS for invalid stream 5
+[0511/194030.521:INFO:CONSOLE(22)] "Here I am !!!", source: https://cn1app/streams/1 (22)

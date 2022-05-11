@@ -44,20 +44,22 @@ import com.codename1.ui.util.Resources;
  */
 public class HomeForm extends Form{
 Form current;
+Resources res;
      public HomeForm() {
         current=this; //Back 
-        setTitle("Home");
+        setTitle("PACK & GO");
         setLayout(BoxLayout.y());
         
-        add(new Label("Choose an option"));
-        add(new Label("Choose an option"));
+        add(new Label("DASHBOARD"));
         Button btnAddRestau = new Button("Add Restau");
         Button btnListResetau = new Button("List Restau");
         Button btnList =  new Button("Front Restau");
+        Button btnHotel =  new Button("Gestion Hotels");
 
         btnAddRestau.addActionListener(e-> new AddRestauForm(current).show());
         btnListResetau.addActionListener(e-> new ListRestauuForm(current).show());
         btnList.addActionListener(e-> new ListFrontRestau(current).show());
+        btnHotel.addActionListener(e-> new HomeHotelForm().show());
       /*  btnList.addActionListener(e-> new ListFrontRestau(current).show());
         btnList.addActionListener(e-> new ListFrontRestau(current).show());
         btnList.addActionListener(e-> new ListFrontRestau(current).show());
@@ -70,7 +72,7 @@ Form current;
         // btnMapRestau.addActionListener(e->  new MapForm());
       //  btnMapRestau.addActionListener(e-> new MapForm (current).show());
 
-        addAll(btnAddRestau,btnListResetau,btnList);
+        addAll(btnAddRestau,btnListResetau,btnList, btnHotel);
         
          
     }

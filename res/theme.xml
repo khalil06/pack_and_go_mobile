@@ -2,6 +2,8 @@
 
 <resource majorVersion="1" minorVersion="11" useXmlUI="false">
     <image name="admin_man_person_user_icon_127232.png"  />
+    <image name="emty.png"  />
+    <image name="full.png"  />
     <image name="g2.jpg"  />
     <ui name="Main" />
     <theme name="Theme">
