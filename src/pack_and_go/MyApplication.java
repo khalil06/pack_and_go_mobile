@@ -47,7 +47,7 @@ public class MyApplication {
         //Form hi = new Form("JSON Parsing", new BoxLayout(BoxLayout.Y_AXIS));
 
 //        hi.show();
-        PersonalityTest.createPersonalityTestForm().show();
+        new MenuComponent().getMenu().show();
 
     }
 

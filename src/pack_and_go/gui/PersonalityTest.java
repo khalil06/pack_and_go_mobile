@@ -1,42 +1,38 @@
 package pack_and_go.gui;
-
 import com.codename1.charts.ChartComponent;
-import com.codename1.charts.util.ColorUtil;
-import com.codename1.components.ScaleImageButton;
-import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
-import com.codename1.io.Log;
 import com.codename1.io.rest.Response;
 import com.codename1.io.rest.Rest;
 import com.codename1.ui.*;
+import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
-import com.codename1.ui.table.TableLayout;
-import com.sun.java.swing.plaf.gtk.GTKConstants;
+import pack_and_go.Components.ButtonComponent;
+import pack_and_go.Components.RadioButtonComponent;
 import pack_and_go.Entities.Personality;
 import pack_and_go.api.Chart;
 import pack_and_go.api.Histogram;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class PersonalityTest {
-    public static String  finalAnswer="";
+    public static String finalAnswer = "";
     public static int[] extrovertVsIntrovertAnswersStorage = {2, 2, 2, 2, 2};//new int[5];// answer storing
-    public static int[] sensingVsIntuitionsAnswersStorage =  {2, 2, 2, 2, 2};// answer storing
-    public static int[] thinkingVsFeelingAnswersStorage =  {2, 2, 2, 2, 2};// answer storing
-    public static int[] judgingVsPerceivingAnswersStorage =  {2, 2, 2, 2, 2};// answer storing
+    public static int[] sensingVsIntuitionsAnswersStorage = {2, 2, 2, 2, 2};// answer storing
+    public static int[] thinkingVsFeelingAnswersStorage = {2, 2, 2, 2, 2};// answer storing
+    public static int[] judgingVsPerceivingAnswersStorage = {2, 2, 2, 2, 2};// answer storing
     public static List<Personality> personalities;
+
     public static int sum(int[] intArrays) {
         int sum = 0;
         for (int number : intArrays)
             sum += number;
         return sum;
     }
+
     public static int countNumbers(int[] numArray, int number) {
         int count = 0;
         for (int num : numArray) {
@@ -45,28 +41,23 @@ public class PersonalityTest {
         }
         return count;
     }
-    public static Form createPersonalityTestForm(){
+
+    public static Form createPersonalityTestForm() {
         Form q1 = new Form("Personality Test", new BoxLayout(BoxLayout.Y_AXIS));
-        Style s = UIManager.getInstance().getComponentStyle("TitleCommand");
-        FontImage icon = FontImage.createMaterial(FontImage.MATERIAL_WARNING, s);
-        q1.getToolbar().addCommandToLeftBar("Left", icon, (e) -> Log.p("Clicked"));
-        q1.getToolbar().addCommandToRightBar("Right", icon, (e) -> Log.p("Clicked"));
-        q1.getToolbar().addCommandToOverflowMenu("Overflow", icon, (e) -> Log.p("Clicked"));
-        q1.getToolbar().addCommandToSideMenu("Sidemenu", icon, (e) -> Log.p("Clicked"));
         Response<Map> jsonData = Rest.
                 get("http://127.0.0.1:8000/mobile").
                 acceptJson().
                 getAsJsonMap();
-        List<Map<String, Object>> res= (List<Map<String, Object>>) jsonData.getResponseData().get("root");
+        List<Map<String, Object>> res = (List<Map<String, Object>>) jsonData.getResponseData().get("root");
 
-        personalities = res.stream().map(obj->{
+        personalities = res.stream().map(obj -> {
 
-            String personalityId = (String)obj.get("personalityId");
-            LinkedHashMap decisionMaking=(LinkedHashMap)obj.get("decisionMaking");
-            LinkedHashMap interaction = (LinkedHashMap)obj.get("interaction");
-            LinkedHashMap processing=(LinkedHashMap)obj.get("processing");
-            LinkedHashMap social=(LinkedHashMap)obj.get("social");
-            return new Personality(personalityId,social,processing,decisionMaking,interaction);
+            String personalityId = (String) obj.get("personalityId");
+            LinkedHashMap decisionMaking = (LinkedHashMap) obj.get("decisionMaking");
+            LinkedHashMap interaction = (LinkedHashMap) obj.get("interaction");
+            LinkedHashMap processing = (LinkedHashMap) obj.get("processing");
+            LinkedHashMap social = (LinkedHashMap) obj.get("social");
+            return new Personality(personalityId, social, processing, decisionMaking, interaction);
         }).collect(Collectors.toList());
         int questionNb = 1;
 
@@ -77,58 +68,59 @@ public class PersonalityTest {
                         "B. seek private solitary activities with quiet to concentrate :",
                 "A. external, communicative,  express yourself. B. internal, reticent, keep to yourself :",
                 "A. active, initiate. B. reflective, deliberate :"};
-        for (String question:extroversionVsIntroversionTest
+        Toolbar tb = q1.getToolbar();
+        Container topBar = BorderLayout.east(new Label("Menu"));
+        topBar.add(BorderLayout.SOUTH, new Label("Cool App Tagline...", "SidemenuTagline"));
+        topBar.setUIID("SideCommand");
+        tb.addComponentToSideMenu(topBar);
+
+        tb.addMaterialCommandToSideMenu("Home", FontImage.MATERIAL_HOME, e -> {
+        });
+        tb.addMaterialCommandToSideMenu("Website", FontImage.MATERIAL_WEB, e -> {
+        });
+        tb.addMaterialCommandToSideMenu("Settings", FontImage.MATERIAL_SETTINGS, e -> {
+        });
+        tb.addMaterialCommandToSideMenu("About", FontImage.MATERIAL_INFO, e -> {
+        });
+
+        Style s = UIManager.getInstance().getComponentStyle("Title");
+        for (String question : extroversionVsIntroversionTest
         ) {
             Label questionNumber = new Label("Question Number : " + questionNb);
             int finalQuestionNb = questionNb - 1;
-
-            SpanLabel questionLabel =new SpanLabel(question);
-
-            RadioButton A = new RadioButton("A");
+            SpanLabel questionLabel = new SpanLabel(question);
+            RadioButton A = new RadioButtonComponent().getRadioButtonComponent("A");
             A.addActionListener(evt -> extrovertVsIntrovertAnswersStorage[finalQuestionNb] = 1);
-            RadioButton B= new RadioButton("B");
+            RadioButton B = new RadioButtonComponent().getRadioButtonComponent("B");
             B.addActionListener(evt -> extrovertVsIntrovertAnswersStorage[finalQuestionNb] = 0);
             new ButtonGroup(A, B);
+            q1.add(questionNumber);
             q1.add(questionLabel);
             q1.add(A);
             q1.add(B);
 
             questionNb++;
         }
-        //questionLabel.setUnselectedStyle(style);
-        /*
-        q1.getToolbar().addCommandToLeftBar("Left", icon, (e) -> Log.p("Clicked"));
-        q1.getToolbar().addCommandToRightBar("Right", icon, (e) -> Log.p("Clicked"));
-        q1.getToolbar().addCommandToOverflowMenu("Overflow", icon, (e) -> Log.p("Clicked"));
-        q1.getToolbar().addCommandToSideMenu("Sidemenu", icon, (e) -> Log.p("Clicked"));*/
-        s.setBackgroundGradientStartColor(ColorUtil.BLUE);
-        s.setBackgroundGradientEndColor(ColorUtil.YELLOW);
-        q1.getToolbar().getUnselectedStyle().setBorder(Border.createEmpty(),true);
-        q1.getToolbar().getUnselectedStyle().setBgTransparency(255);
         q1.getToolbar().setUnselectedStyle(s);
-        Style buttonStyle=new Style();
-        buttonStyle.setBgColor(ColorUtil.rgb(104, 222, 218));
-        buttonStyle.setBackgroundType(Style.BACKGROUND_IMAGE_SCALED_FILL);
-        Button next= new Button("Next");
-        next.setUnselectedStyle(buttonStyle);
-
+        Button next=new ButtonComponent().getButton("Next");
         next.addActionListener(evt -> {
-            int sumOfAsInExtroversion= sum(extrovertVsIntrovertAnswersStorage);
+            int sumOfAsInExtroversion = sum(extrovertVsIntrovertAnswersStorage);
             // append personality type accordingly
-            System.out.println(" I OR E "+sumOfAsInExtroversion);
+            System.out.println(" I OR E " + sumOfAsInExtroversion);
             if (sumOfAsInExtroversion < 3)
-                finalAnswer=finalAnswer+"I";
+                finalAnswer = finalAnswer + "I";
             else {
-                finalAnswer=finalAnswer+"E";
+                finalAnswer = finalAnswer + "E";
             }
-            System.out.println("final answer"+finalAnswer);
+            System.out.println("final answer" + finalAnswer);
             createPage2Form().show();
         });
         //    next.addActionListener();
         q1.add(next);
         return q1;
     }
-    public static Form createPage2Form(){
+
+    public static Form createPage2Form() {
         Form q2 = new Form("Personality Test", new BoxLayout(BoxLayout.Y_AXIS));
         int questionNb = 1;
 
@@ -140,15 +132,15 @@ public class PersonalityTest {
                 "A. focus on here-and-now\" .B.look to the future, global perspective, \"big picture\"",
                 "A. facts, things, \"what is\". B. ideas, dreams, \"what could be,\" philosophical"
         };
-        for (String question:sensingVsIntuitionTest
+        for (String question : sensingVsIntuitionTest
         ) {
             Label questionNumber = new Label("Question Number : " + questionNb);
 
-            SpanLabel questionLabel =new SpanLabel(question);
+            SpanLabel questionLabel = new SpanLabel(question);
             int finalQuestionNb = questionNb - 1;
-            RadioButton A = new RadioButton("A");
+            RadioButton A = new RadioButtonComponent().getRadioButtonComponent("A");
             A.addActionListener(evt -> sensingVsIntuitionsAnswersStorage[finalQuestionNb] = 1);
-            RadioButton B= new RadioButton("B");
+            RadioButton B = new RadioButtonComponent().getRadioButtonComponent("B");
             B.addActionListener(evt -> sensingVsIntuitionsAnswersStorage[finalQuestionNb] = 0);
             new ButtonGroup(A, B);
             q2.add(questionNumber);
@@ -157,21 +149,22 @@ public class PersonalityTest {
             q2.add(B);
             questionNb++;
         }
-        Button next= new Button("Next");
+        Button next=new ButtonComponent().getButton("Next");
         next.addActionListener(evt -> {
-            int sumOfAsInSensing= sum(sensingVsIntuitionsAnswersStorage);
+            int sumOfAsInSensing = sum(sensingVsIntuitionsAnswersStorage);
             // append personality type accordingly
             if (sumOfAsInSensing < 3)
-                finalAnswer=finalAnswer+"N";
+                finalAnswer = finalAnswer + "N";
             else {
-                finalAnswer=finalAnswer+"S";
+                finalAnswer = finalAnswer + "S";
             }
             createPage3Form().show();
         });
         q2.add(next);
         return q2;
     }
-    public static Form createPage3Form(){
+
+    public static Form createPage3Form() {
         Form q3 = new Form("Personality Test", new BoxLayout(BoxLayout.Y_AXIS));
         String answer;
         int questionNb = 1;
@@ -184,15 +177,15 @@ public class PersonalityTest {
                 "A. tough-minded, just B.tender-hearted, merciful",
                 "A. matter of fact, issue-oriented B. sensitive, people-oriented, compassionate",
         };
-        for (String question:thinkingVsFeelingTest
+        for (String question : thinkingVsFeelingTest
         ) {
             int finalQuestionNb = questionNb - 1;
             Label questionNumber = new Label("Question Number : " + questionNb);
 
-            SpanLabel questionLabel =new SpanLabel(question);
-            RadioButton A = new RadioButton("A");
+            SpanLabel questionLabel = new SpanLabel(question);
+            RadioButton A = new RadioButtonComponent().getRadioButtonComponent("A");
             A.addActionListener(evt -> thinkingVsFeelingAnswersStorage[finalQuestionNb] = 1);
-            RadioButton B= new RadioButton("B");
+            RadioButton B = new RadioButtonComponent().getRadioButtonComponent("B");
             B.addActionListener(evt -> thinkingVsFeelingAnswersStorage[finalQuestionNb] = 0);
             new ButtonGroup(A, B);
 
@@ -203,14 +196,14 @@ public class PersonalityTest {
             questionNb++;
 
         }
-        Button next= new Button("Next");
+        Button next=new ButtonComponent().getButton("Next");
         next.addActionListener(evt -> {
-            int sumOfAsInThinking= sum(thinkingVsFeelingAnswersStorage);
+            int sumOfAsInThinking = sum(thinkingVsFeelingAnswersStorage);
             // append personality type accordingly
             if (sumOfAsInThinking < 3)
-                finalAnswer=finalAnswer+"F";
+                finalAnswer = finalAnswer + "F";
             else {
-                finalAnswer=finalAnswer+"T";
+                finalAnswer = finalAnswer + "T";
             }
             createPage4Form().show();
         });
@@ -218,7 +211,8 @@ public class PersonalityTest {
         q3.add(next);
         return q3;
     }
-    public static Form createPage4Form(){
+
+    public static Form createPage4Form() {
         Form q4 = new Form("Personality Test", new BoxLayout(BoxLayout.Y_AXIS));
         String answer;
         int questionNb = 1;
@@ -229,14 +223,14 @@ public class PersonalityTest {
                 "A. regulated, structured B. easygoing, “live\" and “let live\"",
                 "A. preparation, plan ahead. B. go with the flow, adapt as you go",
                 "A. control, govern B. latitude, freedom"};
-        for (String question:judgingVsPerceivingTest
+        for (String question : judgingVsPerceivingTest
         ) {
             int finalQuestionNb = questionNb - 1;
-            SpanLabel questionLabel =new SpanLabel(question);
+            SpanLabel questionLabel = new SpanLabel(question);
             questionLabel.setGap(1);
-            RadioButton A = new RadioButton("A");
+            RadioButton A = new RadioButtonComponent().getRadioButtonComponent("A");
             A.addActionListener(evt -> judgingVsPerceivingAnswersStorage[finalQuestionNb] = 1);
-            RadioButton B= new RadioButton("B");
+            RadioButton B = new RadioButtonComponent().getRadioButtonComponent("B");
             B.addActionListener(evt -> judgingVsPerceivingAnswersStorage[finalQuestionNb] = 0);
             new ButtonGroup(A, B);
             q4.add(questionLabel);
@@ -244,14 +238,14 @@ public class PersonalityTest {
             q4.add(B);
             questionNb++;
         }
-        Button next= new Button("Next");
+        Button next=new ButtonComponent().getButton("Next");
         next.addActionListener(evt -> {
-            int sumOfAsInJudging= sum(judgingVsPerceivingAnswersStorage);
+            int sumOfAsInJudging = sum(judgingVsPerceivingAnswersStorage);
             // append personality type accordingly
             if (sumOfAsInJudging < 3)
-                finalAnswer=finalAnswer+"P";
+                finalAnswer = finalAnswer + "P";
             else {
-                finalAnswer=finalAnswer+"J";
+                finalAnswer = finalAnswer + "J";
             }
             result().show();
         });
@@ -259,12 +253,13 @@ public class PersonalityTest {
         return q4;
 
     }
-    public static Form result(){
+
+    public static Form result() {
         try {
             Map<String, Object> jsonData = (Map<String, Object>) Rest.
                     patch("http://127.0.0.1:8000/mobile/u/p").body(new Object() {
-                        public String personalityId =finalAnswer;
-                        public String userPersonalityId="3";
+                        public String personalityId = finalAnswer;
+                        public String userPersonalityId = "3";
 
                         @Override
                         public String toString() {
@@ -274,27 +269,27 @@ public class PersonalityTest {
                                     '}';
                         }
                     }.toString()).acceptJson().getAsJsonMap();
-        }catch (Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception);
         }
         //  body().
         //acceptJson().
         //getAsJsonMap();
-        List<Personality> filterPersonalities=personalities.stream().filter(personality -> personality.getPersonalityId().startsWith(finalAnswer)).collect(Collectors.toList());
+        List<Personality> filterPersonalities = personalities.stream().filter(personality -> personality.getPersonalityId().startsWith(finalAnswer)).collect(Collectors.toList());
         Form personalityReport = new Form("Personality Test", new BoxLayout(BoxLayout.Y_AXIS));
 
-        filterPersonalities.forEach(filterPersonality->{
-            Label personalityId=new Label(filterPersonality.getPersonalityId());
-            SpanLabel sociacDetails=new SpanLabel(filterPersonality.getSocial().get("socialDetails").toString());
-            SpanLabel processingDetails=new SpanLabel(filterPersonality.getProcessing().get("processingDetails").toString());
-            SpanLabel interactionDetails=new SpanLabel(filterPersonality.getInteraction().get("interactionDetails").toString());
-            SpanLabel thinkingDetails=new SpanLabel(filterPersonality.getDecisionMaking().get("decisionMakingDetails").toString());
+        filterPersonalities.forEach(filterPersonality -> {
+            Label personalityId = new Label(filterPersonality.getPersonalityId());
+            SpanLabel sociacDetails = new SpanLabel(filterPersonality.getSocial().get("socialDetails").toString());
+            SpanLabel processingDetails = new SpanLabel(filterPersonality.getProcessing().get("processingDetails").toString());
+            SpanLabel interactionDetails = new SpanLabel(filterPersonality.getInteraction().get("interactionDetails").toString());
+            SpanLabel thinkingDetails = new SpanLabel(filterPersonality.getDecisionMaking().get("decisionMakingDetails").toString());
             personalityReport.add(personalityId);
             personalityReport.add(sociacDetails);
             personalityReport.add(processingDetails);
             personalityReport.add(interactionDetails);
             personalityReport.add(thinkingDetails);
-            ChartComponent chart=new Chart().createPieChartForm();
+            ChartComponent chart = new Chart().createPieChartForm();
             personalityReport.add(chart);
             personalityReport.add(new Histogram().execute());
         });
