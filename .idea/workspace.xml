@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34cc8dcf-f65d-4fea-86c1-f9980bbde744" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/classes/com/mycompany/myapp/MyApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/classes/com/mycompany/myapp/entities/Resteau.class" afterDir="false" />
@@ -569,6 +570,55 @@
       <change afterPath="$PROJECT_DIR$/native/internal_tmp/com/codename1/ext/filechooser/FileChooserNativeImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/native/internal_tmp/com/codename1/googlemaps/InternalNativeMapsImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/native/internal_tmp/com/codename1/googlemaps/InternalNativeMapsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/Entities/Hotel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/Entities/Resteau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/MyApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/api/IDemoChart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/AddHotelForm$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/AddHotelForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/AddRestauForm$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/AddRestauForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/HomeForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/HomeFront.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/HomeHotelForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListFrontRestau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListHotels$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListHotels$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListHotels.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListRestauuForm$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListRestauuForm$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/ListRestauuForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/MapForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/PersonalityTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/updateHotelForm$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/updateHotelForm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/updateResteau$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/updateResteau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/viewwR.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceHotel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceRestau$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceRestau$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceRestau$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceRestau$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/services/ServiceRestau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/utils/Statics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/generated/StateMachineBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projet-mobile/userclasses/StateMachine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderBottomL_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderBottomR_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderBottom_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderCenter_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderLeft_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderRight_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTopL_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTopR_1.png/veryhigh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/veryhigh.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/res/theme/Main" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/res/theme/Main.ui" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/res/theme/admin_man_person_user_icon_127232.png" afterDir="false" />
@@ -722,28 +772,26 @@
       <change afterPath="$PROJECT_DIR$/uploads/turkey hotel.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/uploads/upp.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/uploads/vietnamien.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Versions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Versions.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codenameone_kotlin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/codenameone_kotlin.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codenameone_settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/codenameone_settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/Components/ButtonComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/Components/RadioButtonComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/Entities/Personality.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/Components/ButtonComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/Components/ButtonComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/Components/RadioButtonComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/Components/RadioButtonComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/Entities/Personality.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/Entities/Personality.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/AbstractDemoChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/Chart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/Histogram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/AbstractDemoChart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/api/AbstractDemoChart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/Chart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/api/Chart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/Histogram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/api/Histogram.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/api/IDemoChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/gui/MenuComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/gui/MenuComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/MenuComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/gui/PersonalityTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/gui/PersonalityTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/pack_and_go/gui/PersonalityTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/com/mycompany/myapp/gui/PersonalityTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projet-mobile/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projet-mobile/theme.res" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/theme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderBottomL_1.png/high.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderBottomL_1.png/high.png" afterDir="false" />
@@ -773,7 +821,6 @@
       <change beforePath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/high.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/high.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/low.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/low.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/medium.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme/ComboBox.sel#borderTop_1.png/medium.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mycompany/myapp/Entities/Personality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/myapp/Entities/Personality.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mycompany/myapp/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mycompany/myapp/MyApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.res" afterDir="false" />
     </list>
