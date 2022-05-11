@@ -1,4 +1,4 @@
-package pack_and_go.Entities;
+package com.mycompany.myapp.Entities;
 
 import java.util.LinkedHashMap;
 

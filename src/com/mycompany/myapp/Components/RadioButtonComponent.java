@@ -1,4 +1,4 @@
-package pack_and_go.Components;
+package com.mycompany.myapp.Components;
 
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.ui.RadioButton;

@@ -1,11 +1,10 @@
-package pack_and_go.gui;
-
+package com.mycompany.myapp.gui;
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.BoxLayout;
-import pack_and_go.Components.ButtonComponent;
-import pack_and_go.Components.RadioButtonComponent;
-import pack_and_go.gui.PersonalityTest;
+import com.mycompany.myapp.Components.ButtonComponent;
+import com.mycompany.myapp.Components.RadioButtonComponent;
+import com.mycompany.myapp.gui.PersonalityTest;
 
 public class MenuComponent {
     public Form getMenu() {

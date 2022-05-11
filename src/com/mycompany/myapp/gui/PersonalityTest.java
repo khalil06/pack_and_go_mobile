@@ -1,4 +1,9 @@
-package pack_and_go.gui;
+package com.mycompany.myapp.gui;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import com.codename1.charts.ChartComponent;
 import com.codename1.components.SpanLabel;
 import com.codename1.io.rest.Response;
@@ -8,15 +13,13 @@ import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
-import pack_and_go.Components.ButtonComponent;
-import pack_and_go.Components.RadioButtonComponent;
-import pack_and_go.Entities.Personality;
-import pack_and_go.api.Chart;
-import pack_and_go.api.Histogram;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import  com.mycompany.myapp.Components.ButtonComponent;
+import  com.mycompany.myapp.Components.RadioButtonComponent;
+import  com.mycompany.myapp.Entities.Personality;
+import  com.mycompany.myapp.api.Chart;
+import  com.mycompany.myapp.api.Histogram;
+
+
 
 public class PersonalityTest {
     public static String finalAnswer = "";

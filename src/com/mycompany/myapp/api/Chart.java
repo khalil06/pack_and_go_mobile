@@ -1,4 +1,4 @@
-package pack_and_go.api;
+package com.mycompany.myapp.api;
 
 import com.codename1.charts.ChartComponent;
 import com.codename1.charts.models.CategorySeries;
@@ -8,7 +8,7 @@ import com.codename1.charts.util.ColorUtil;
 import com.codename1.charts.views.PieChart;
 import com.codename1.ui.Form;
 import com.codename1.ui.layouts.BorderLayout;
-import pack_and_go.gui.PersonalityTest;
+import com.mycompany.myapp.gui.PersonalityTest;
 
 public class Chart {
     /**

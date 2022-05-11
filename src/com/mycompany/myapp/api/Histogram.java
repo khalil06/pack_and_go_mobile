@@ -1,4 +1,4 @@
-package pack_and_go.api;
+package com.mycompany.myapp.api;
 import com.codename1.charts.ChartComponent;
 import com.codename1.charts.renderers.XYMultipleSeriesRenderer;
 import com.codename1.charts.renderers.XYMultipleSeriesRenderer.Orientation;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.codename1.charts.util.ColorUtil;
-import pack_and_go.gui.PersonalityTest;
+import com.mycompany.myapp.gui.PersonalityTest;
 
 
 public class Histogram extends AbstractDemoChart{

@@ -1,4 +1,4 @@
-package pack_and_go.api;
+package com.mycompany.myapp.api;
 
 /**
  * Copyright (C) 2009 - 2013 SC 4ViewSoft SRL
