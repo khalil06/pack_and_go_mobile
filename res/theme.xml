@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="admin_man_person_user_icon_127232.png"  />
+    <image name="g2.jpg"  />
+    <ui name="Main" />
+    <theme name="Theme">
+        <val key="@includeNativeBool" value="true" />
+    </theme>
+</resource>
