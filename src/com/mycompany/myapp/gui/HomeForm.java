@@ -56,12 +56,14 @@ Resources res;
         Button btnList =  new Button("Front Restau");
         Button btnHotel =  new Button("Gestion Hotels");
         Button btnPersonnalite=new Button("Personnalité");
+        Button btnActivite=new Button("Activite");
 
         btnAddRestau.addActionListener(e-> new AddRestauForm(current).show());
         btnListResetau.addActionListener(e-> new ListRestauuForm(current).show());
         btnList.addActionListener(e-> new ListFrontRestau(current).show());
         btnHotel.addActionListener(e-> new HomeHotelForm().show());
         btnPersonnalite.addActionListener(evt -> PersonalityTest.createPersonalityTestForm().show());
+        btnActivite.addActionListener(evt -> new HomeFormActivite().show());
       /*  btnList.addActionListener(e-> new ListFrontRestau(current).show());
         btnList.addActionListener(e-> new ListFrontRestau(current).show());
         btnList.addActionListener(e-> new ListFrontRestau(current).show());
@@ -74,7 +76,7 @@ Resources res;
         // btnMapRestau.addActionListener(e->  new MapForm());
       //  btnMapRestau.addActionListener(e-> new MapForm (current).show());
 
-        addAll(btnAddRestau,btnListResetau,btnList, btnHotel,btnPersonnalite);
+        addAll(btnAddRestau,btnListResetau,btnList, btnHotel,btnPersonnalite,btnActivite);
         
          
     }
